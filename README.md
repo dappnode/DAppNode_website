@@ -6,8 +6,9 @@ This web-application allows the display of transactions to an address on the Eth
 ## Status
 Production ready!
 
-1 - **First instance deployed** - see [ScalingNOW!!! campaign](https://scalingnow.giveth.io)
-2 - **Second instance deployed** - see [Giveth Donation Leaderboard](https://leaderboard.giveth.io)
+**First instance deployed** - see [ScalingNOW!!! campaign](https://scalingnow.giveth.io)
+
+**Second instance deployed** - see [Giveth Donation Leaderboard](https://leaderboard.giveth.io)
 
 ## Important
 We use different branches to build out the leaderboard for different initiatives to **deploy directly from their branch**. If you are a contributor to a specific deploy please stay within that branch and don't commit back to *Master*.
