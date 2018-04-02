@@ -14,7 +14,7 @@ Production ready!
 We use different branches to build out the leaderboard for different initiatives to **deploy directly from their branch**. If you are a contributor to a specific deploy please stay within that branch and don't commit back to *Master*.
 
 ### Primer
-After the great success of the [Merry Merkle](https://merrymerkle.com)project by [TrueBit Team](https://truebit.io/) - they managed to collect over 130.000€ in ETH donations for a local charity project, we at [Giveth](https://giveth.io) figured it would be great if more Ethereum projects could use such a tool.
+After the great success of the [Merry Merkle](https://merrymerkle.com) project by [TrueBit Team](https://truebit.io/) - they managed to collect over 130.000€ in ETH donations for a local charity project, we at [Giveth](https://giveth.io) figured it would be great if more Ethereum projects could use such a tool.
 
 After playing with our fork a bit, we still decided to build our own tool, because we found the original project very specialized for its cause and we would love to make a tool that can be of general use for many other developers down the line.
 
