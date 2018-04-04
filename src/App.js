@@ -149,7 +149,7 @@ class App extends Component {
               from: accounts[0],
               to: donationAddress,
               value: donateWei,
-              gas: 100000 + extraGas,
+              gas: 150000 + extraGas,
               data: message
             })
             .catch(e => {
