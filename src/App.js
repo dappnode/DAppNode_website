@@ -325,10 +325,6 @@ class App extends Component {
                   </div>
                 </li>
               </ol>
-              <h4>
-                {`Made with <3 by the Unicorns at `}
-                <a href="https://giveth.io">Giveth</a>
-              </h4>
             </div>
 
             <div {...responsiveness} className="flex-row d-flex amount">
