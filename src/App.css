@@ -43,6 +43,9 @@ hr {
 }
 
 input {
+  background-color: #bebebe;
+  border-color: #00ffce;
+  color: #222222;
   margin: 0.5rem;
 }
 
