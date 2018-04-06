@@ -345,7 +345,11 @@ class App extends Component {
           </div>
 
           <div className="flex-column donationColumn">
-            <img src="/img/ways-to-donate.svg" className="typelogo img-fluid" />
+            <img
+              src="/img/ways-to-donate.svg"
+              className="typelogo img-fluid"
+              alt=""
+            />
             {candonate ? (
               <div>
                 <h4 {...hiddenOnMobile}>
