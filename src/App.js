@@ -9,7 +9,7 @@ import Emojify from "react-emojione";
 
 const donationNetworkID = 1; // make sure donations only go through on this network.
 
-const donationAddress = "0x5ADF43DD006c6C36506e2b2DFA352E60002d22Dc"; //replace with the address to watch
+const donationAddress = "0x00cf36853aa4024fb5bf5cc377dfd85844b411a0"; //replace with the address to watch
 const apiKey = "6DIUB7X6S92YJR6KXKF8V8ZU55IXT5PN2S"; //replace with your own key
 
 const etherscanApiLink =
@@ -22,6 +22,8 @@ const isSearched = searchTerm => item =>
   item.from.toLowerCase().includes(searchTerm.toLowerCase());
 
 var myweb3;
+
+var FontAwesome = require("react-fontawesome");
 
 class App extends Component {
   constructor(props) {
@@ -271,45 +273,62 @@ class App extends Component {
         >
           <div className="flex-column introColumn">
             <img
-              src="/img/placeholder-banner.svg"
+              src="/img/dappnode-logo.svg"
               className="typelogo img-fluid"
-              alt="Banner Placeholder"
+              alt="DAppNode Logo"
             />
             <div className="introContainer">
-              <h1>Donation Leaderboard</h1>
-              <p>To deploy your own leaderboard:</p>
+              <p>
+                DAppNode is currently in development and is poised to put new
+                possibilities of decentralized online activity into the hands of
+                everybody.
+              </p>
+
               <ol>
                 <li>
-                  1 - Star and fork the
-                  <a href="https://github.com/giveth/donation-leaderboard">
-                    {" "}
-                    Donation Leaderboard on GitHub/Giveth
-                  </a>
-                  on your own repository
+                  <div className="media">
+                    <FontAwesome className="icon" name="github" size="2x" />
+                    <div className="margin-left">
+                      Built in an open-source community fashion on{" "}
+                      <a href="https://github.com/dappnode">Github</a>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  2 - Get your own API key from{" "}
-                  <a href="https://etherscan.io">etherscan.io</a>
+                  <div className="media">
+                    <img
+                      src="/img/giveth-logo-darkgrey.svg"
+                      className="img-fluid icon"
+                      alt="Giveth Logo"
+                    />
+                    <div className="margin-left">
+                      Supported by <a href="https://giveth.io">Giveth</a>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  3 - Change the <strong>donationAddress</strong> and{" "}
-                  <strong>apiKey</strong> variables in your /src/App.js file
+                  <div className="media">
+                    <FontAwesome name="medium" size="2x" />
+                    <div className="margin-left">
+                      Stay tuned for updates on{" "}
+                      <a href="https://medium.com/giveth">Medium</a>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  4 - Replace placeholder images for <strong>banner</strong> and{" "}
-                  <strong>QR code</strong> in public/img and also in your
-                  /src/App.js file
+                  <div className="media">
+                    <FontAwesome name="heart" size="2x" />
+                    <div className="margin-left">
+                      By donating to this project, you directly fund the
+                      developers of DAppNode.
+                    </div>
+                  </div>
                 </li>
               </ol>
               <h4>
                 {`Made with <3 by the Unicorns at `}
                 <a href="https://giveth.io">Giveth</a>
               </h4>
-              <p>
-                This page uses the Giveth Donation address. By donating you
-                support open source projects like this one.{" "}
-                <a href="https://giveth.io/donate/">More Info</a>
-              </p>
             </div>
 
             <div {...responsiveness} className="flex-row d-flex amount">
@@ -345,7 +364,7 @@ class App extends Component {
                     name="amount"
                   />
                   <input type="text" placeholder="message" name="message" />
-                  <button className="btn btn-primary">Send</button>
+                  <button className="btn btn-warning">Send</button>
                 </form>
               </div>
             ) : (
@@ -353,9 +372,13 @@ class App extends Component {
             )}
             <hr />
             <h4>Privately: Send directly to the donation address</h4>
-            <img src="/img/placeholder-qr.svg" className="qr-code" />
+            <img
+              src="/img/dappnode-qr.svg"
+              className="qr-code"
+              alt="Donation QR Code"
+            />
             <div className="word-wrap">
-              <strong>{donationAddress}</strong>
+              <strong className="color-main-accent">{donationAddress}</strong>
             </div>
           </div>
         </div>
