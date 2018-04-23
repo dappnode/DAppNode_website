@@ -156,6 +156,11 @@ max-width: 100vw;
   margin: 1.5rem;
 }
 
+.header {
+  min-height: 40vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .leaderboard {
   overflow-x: auto;
   background-image: url('/img/dappnode-background.svg');
@@ -172,11 +177,15 @@ max-width: 100vw;
 
 .media {
   display: flex;
-  max-width: 600px;
+  max-width: 450px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin: auto;
   padding-bottom: 0.5rem;
+}
+
+.middleBlock {
+  padding-top: 2rem;
 }
 
 .row, .flex-row {
@@ -190,9 +199,6 @@ max-width: 100vw;
   border-color: #bebebe;
 }
 
-.header {
-  min-height: 40vh;
-}
 
 .Search {
   padding: 0px;

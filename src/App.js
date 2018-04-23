@@ -299,7 +299,7 @@ class App extends Component {
               </div>
             </div>
 
-            <div {...responsiveness} className="flex-row d-flex">
+            <div {...responsiveness} className="flex-row d-flex middleBlock">
 
               <ol {...maxOnMobile} id="block" className="flex-row d-flex blockColumn justify-content-around">
                 <li {...maxOnMobile} className="card text-center">
