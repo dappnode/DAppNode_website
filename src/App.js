@@ -265,97 +265,130 @@ class App extends Component {
       }
     });
 
+    const maxOnMobile = css({
+      "@media(max-width: 700px)": {
+        "max-width": "100%"
+      }
+    });
+
+
     return (
       <div className="App container-fluid">
-        <div
-          {...responsiveness}
-          className="flex-row d-flex justify-content-around"
-        >
-          <div className="flex-column introColumn">
-            <img
-              src="/img/dappnode-logo.svg"
-              className="typelogo img-fluid"
-              alt="DAppNode Logo"
+        <div {...responsiveness} className="flex-row d-flex justify-content-around header">
+        
+          <img
+            src="/img/dappnode-logo.svg"
+            className="typelogo img-fluid"
+            alt="DAppNode Logo"
             />
-            <div className="introContainer">
-              <p>
-                DAppNode is currently in development and is poised to put new
-                possibilities of decentralized online activity into the hands of
-                everybody.
-              </p>
 
-              <ol>
-                <li>
-                  <div className="media">
-                    <FontAwesome className="icon" name="github" size="2x" />
-                    <div className="margin-left">
-                      Built in an open-source community fashion on{" "}
+              <div {...responsiveness} id="intro-text" className="flex-row d-flex">
+               <div class="media">
+                 <div class="media-body">
+                   <h5 class="mt-0">Goal</h5>
+                   The goal of DAppNode is to make it easy for users to run their own personalized nodes and choose the DApps that run on top of it. Nodes can connect to each other and form a decentralized network.
+                 </div>
+                </div>
+                <div class="media">
+                 <FontAwesome class="mr-3" name="ethereum" alt="Generic placeholder image" />
+                 <div class="media-body">
+                   <h5 class="mt-0">Technology</h5>
+                   DAppNode is available as a linux image - ready for install on any pc, server or virtual machine. It creates an Ethereum node and offers easy deployment of DApps on top of your node.
+                 </div>
+                </div>
+              </div>
+            </div>
+
+            <div {...responsiveness} className="flex-row d-flex">
+
+              <ol {...maxOnMobile} id="block" className="flex-row d-flex blockColumn justify-content-around">
+                <li {...maxOnMobile} className="card text-center">
+                  <div className="card-header">
+                    <FontAwesome name="github" size="5x" />
+                  </div>
+                    <div className="card-body">
+                      <div className="card-text">
+                      DAppNode is currently in open-source development on{" "}
                       <a href="https://github.com/dappnode">Github</a>
-                    </div>
+                      </div>
                   </div>
                 </li>
-                <li>
-                  <div className="media">
+                <li {...maxOnMobile} className="card text-center">
+                  <div className="card-header">
+                    <FontAwesome name="download" size="5x" />
+                  </div>
+                    <div className="card-body">
+                      <div className="card-text">
+                        Try it yourself!{" "}
+                        <a href="https://github.com/dappnode" className="btn btn-warning">Install</a>
+                      </div>
+                    </div>
+                </li>
+                <li {...maxOnMobile} className="card text-center">
+                  <div className="card-header">
                     <img
-                      src="/img/giveth-logo-darkgrey.svg"
-                      className="img-fluid icon"
+                      src="/img/giveth-logo-black.svg"
+                      className="icon"
                       alt="Giveth Logo"
                     />
-                    <div className="margin-left">
-                      Supported by <a href="https://giveth.io">Giveth</a>
+                  </div>
+                  <div className="card-body">
+                    <div className="card-text">
+                      Transparently tracking contributor payouts via a campaign on <a href="https://alpha.giveth.io/campaigns/OcKJryNwjeidMXi9">Giveth <strong>Alpha</strong></a>
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div className="media">
-                    <FontAwesome name="medium" size="2x" />
-                    <div className="margin-left">
-                      Stay tuned for updates on{" "}
-                      <a href="https://medium.com/giveth">Medium</a>
+                <li {...maxOnMobile} className="card text-center">
+                  <div className="card-header">
+                    <FontAwesome name="wikipedia-w" size="5x" />
+                  </div>
+                    <div className="card-body">
+                      <div className="card-text">
+                        For more details, please visit the{" "}
+                        <a href="https://github.com/dappnode/DAppNode/wiki">Wiki</a>
+                      </div>
+                    </div>
+                </li>
+                <li {...maxOnMobile} className="card text-center">
+                  <div className="card-header">
+                  <img
+                      src="/img/riot-logo.svg"
+                      className="icon"
+                      alt="Riot.im logo"
+                    />
+                  </div>
+                  <div className="card-body">
+                    <div className="card-text">
+                      Talk to us on{" "}
+                      <a href="https://riot.im/app/#/room/#DAppNode:matrix.org" className="btn btn-warning">Riot.im</a>
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div className="media">
-                    <FontAwesome name="heart" size="2x" />
-                    <div className="margin-left">
+                <li {...maxOnMobile} className="card text-center">
+                  <div className="card-header">
+                    <FontAwesome name="heart" size="5x" />
+                  </div>
+                  <div className="card-body">
+                    <div className="card-text">
                       By donating to this project, you directly fund the
-                      developers of DAppNode.
+                      development of DAppNode.
                     </div>
                   </div>
                 </li>
               </ol>
-            </div>
 
-            <div {...responsiveness} className="flex-row d-flex amount">
-              <div className="flex-column margin">
-                <strong>Amount donated </strong>
-                <h3>{this.state.totalAmount} ETH</h3>
-              </div>
-              <div className="flex-column margin">
-                <form className="Search">
-                  <input
-                    type="text"
-                    onChange={this.onSearchChange}
-                    placeholder="filter leaderboard"
-                  />
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex-column donationColumn">
+            <div {...maxOnMobile} className="flex-column justify-content-center donationColumn">
             <img
               src="/img/ways-to-donate.svg"
-              className="typelogo img-fluid"
+              className="img-fluid typelogo-donate"
               alt=""
             />
             {candonate ? (
               <div>
-                <h4 {...hiddenOnMobile}>
+                <h6 {...hiddenOnMobile}>
                   Publicly: Send a transaction via Metamask with your Team Name
                   as a message{" "}
-                </h4>
+                </h6>
 
                 <form {...hiddenOnMobile} onSubmit={this.handleDonate}>
                   <input
@@ -371,7 +404,7 @@ class App extends Component {
               <br />
             )}
             <hr />
-            <h4>Privately: Send directly to the donation address</h4>
+            <h6>Privately: Send directly to the donation address</h6>
             <img
               src="/img/dappnode-qr.svg"
               className="qr-code"
@@ -380,6 +413,23 @@ class App extends Component {
             <div className="word-wrap">
               <strong className="color-main-accent">{donationAddress}</strong>
             </div>
+          </div>
+
+        </div>
+            
+        <div {...responsiveness} className="flex-row d-flex amount">
+          <div className="flex-column margin">
+            <strong>Amount donated </strong>
+            <h3>{this.state.totalAmount} ETH</h3>
+          </div>
+          <div className="flex-column margin">
+            <form className="Search">
+              <input
+                type="text"
+                onChange={this.onSearchChange}
+                placeholder="filter leaderboard"
+              />
+            </form>
           </div>
         </div>
 
