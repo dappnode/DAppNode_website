@@ -12,11 +12,18 @@ const donationNetworkID = 1; // make sure donations only go through on this netw
 const donationAddress = "0x00cf36853aa4024fb5bf5cc377dfd85844b411a0"; //replace with the address to watch
 const apiKey = "6DIUB7X6S92YJR6KXKF8V8ZU55IXT5PN2S"; //replace with your own key
 
-const etherscanApiLink =
-  "https://api.etherscan.io/api?module=account&action=txlist&address=" +
-  donationAddress +
-  "&startblock=0&endblock=99999999&sort=asc&apikey=" +
-  apiKey;
+const etherscanApiLinks = {
+  extTx:
+    "https://api.etherscan.io/api?module=account&action=txlistinternal&address=" +
+    donationAddress +
+    "&startblock=0&endblock=99999999&sort=asc&apikey=" +
+    apiKey,
+  intTx:
+    "https://api.etherscan.io/api?module=account&action=txlist&address=" +
+    donationAddress +
+    "&startblock=0&endblock=99999999&sort=asc&apikey=" +
+    apiKey
+};
 
 const isSearched = searchTerm => item =>
   item.from.toLowerCase().includes(searchTerm.toLowerCase());
@@ -108,10 +115,16 @@ class App extends Component {
   };
 
   getAccountData = () => {
-    return fetch(`${etherscanApiLink}`)
-      .then(originalResponse => originalResponse.json())
+    let fetchCalls = [
+      fetch(`${etherscanApiLinks.extTx}`),
+      fetch(`${etherscanApiLinks.intTx}`)
+    ];
+    return Promise.all(fetchCalls)
+      .then(res => {
+        return Promise.all(res.map(apiCall => apiCall.json()));
+      })
       .then(responseJson => {
-        return responseJson.result;
+        return [].concat.apply(...responseJson.map(res => res.result));
       });
   };
 
@@ -181,6 +194,10 @@ class App extends Component {
         // group by address and sum tx value
         if (cur.isError !== "0") {
           // tx was not successful - skip it.
+          return acc;
+        }
+        if (cur.from == donationAddress) {
+          // tx was outgoing - don't add it in
           return acc;
         }
         if (typeof acc[cur.from] === "undefined") {
@@ -271,113 +288,142 @@ class App extends Component {
       }
     });
 
-
     return (
       <div className="App container-fluid">
-        <div {...responsiveness} className="flex-row d-flex justify-content-around header">
-        
+        <div
+          {...responsiveness}
+          className="flex-row d-flex justify-content-around header"
+        >
           <img
             src="/img/dappnode-logo.svg"
             className="typelogo img-fluid"
             alt="DAppNode Logo"
-            />
+          />
 
-              <div {...responsiveness} id="intro-text" className="flex-row d-flex">
-               <div class="media">
-                 <div class="media-body">
-                   <h5 class="mt-0">Goal</h5>
-                   The goal of DAppNode is to make it easy for users to run their own personalized nodes and choose the DApps that run on top of it. Nodes can connect to each other and form a decentralized network.
-                 </div>
-                </div>
-                <div class="media">
-                 <FontAwesome class="mr-3" name="ethereum" alt="Generic placeholder image" />
-                 <div class="media-body">
-                   <h5 class="mt-0">Technology</h5>
-                   DAppNode is available as a linux image - ready for install on any pc, server or virtual machine. It creates an Ethereum node and offers easy deployment of DApps on top of your node.
-                 </div>
-                </div>
+          <div {...responsiveness} id="intro-text" className="flex-row d-flex">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="mt-0">Goal</h5>
+                The goal of DAppNode is to make it easy for users to run their
+                own personalized nodes and choose the DApps that run on top of
+                it. Nodes can connect to each other and form a decentralized
+                network.
               </div>
             </div>
+            <div class="media">
+              <FontAwesome
+                class="mr-3"
+                name="ethereum"
+                alt="Generic placeholder image"
+              />
+              <div class="media-body">
+                <h5 class="mt-0">Technology</h5>
+                DAppNode is available as a linux image - ready for install on
+                any pc, server or virtual machine. It creates an Ethereum node
+                and offers easy deployment of DApps on top of your node.
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div {...responsiveness} className="flex-row d-flex middleBlock">
+        <div {...responsiveness} className="flex-row d-flex middleBlock">
+          <ol
+            {...maxOnMobile}
+            id="block"
+            className="flex-row d-flex blockColumn justify-content-around"
+          >
+            <li {...maxOnMobile} className="card text-center">
+              <div className="card-header">
+                <FontAwesome name="github" size="5x" />
+              </div>
+              <div className="card-body">
+                <div className="card-text">
+                  DAppNode is currently in open-source development on{" "}
+                  <a href="https://github.com/dappnode">Github</a>
+                </div>
+              </div>
+            </li>
+            <li {...maxOnMobile} className="card text-center">
+              <div className="card-header">
+                <FontAwesome name="download" size="5x" />
+              </div>
+              <div className="card-body">
+                <div className="card-text">
+                  Try it yourself!{" "}
+                  <a
+                    href="https://github.com/dappnode"
+                    className="btn btn-warning"
+                  >
+                    Install
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li {...maxOnMobile} className="card text-center">
+              <div className="card-header">
+                <img
+                  src="/img/giveth-logo-black.svg"
+                  className="icon"
+                  alt="Giveth Logo"
+                />
+              </div>
+              <div className="card-body">
+                <div className="card-text">
+                  Transparently tracking contributor payouts via a campaign on{" "}
+                  <a href="https://alpha.giveth.io/campaigns/OcKJryNwjeidMXi9">
+                    Giveth <strong>Alpha</strong>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li {...maxOnMobile} className="card text-center">
+              <div className="card-header">
+                <FontAwesome name="wikipedia-w" size="5x" />
+              </div>
+              <div className="card-body">
+                <div className="card-text">
+                  For more details, please visit the{" "}
+                  <a href="https://github.com/dappnode/DAppNode/wiki">Wiki</a>
+                </div>
+              </div>
+            </li>
+            <li {...maxOnMobile} className="card text-center">
+              <div className="card-header">
+                <img
+                  src="/img/riot-logo.svg"
+                  className="icon"
+                  alt="Riot.im logo"
+                />
+              </div>
+              <div className="card-body">
+                <div className="card-text">
+                  Talk to us on{" "}
+                  <a
+                    href="https://riot.im/app/#/room/#DAppNode:matrix.org"
+                    className="btn btn-warning"
+                  >
+                    Riot.im
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li {...maxOnMobile} className="card text-center">
+              <div className="card-header">
+                <FontAwesome name="heart" size="5x" />
+              </div>
+              <div className="card-body">
+                <div className="card-text">
+                  By donating to this project, you directly fund the development
+                  of DAppNode.
+                </div>
+              </div>
+            </li>
+          </ol>
 
-              <ol {...maxOnMobile} id="block" className="flex-row d-flex blockColumn justify-content-around">
-                <li {...maxOnMobile} className="card text-center">
-                  <div className="card-header">
-                    <FontAwesome name="github" size="5x" />
-                  </div>
-                    <div className="card-body">
-                      <div className="card-text">
-                      DAppNode is currently in open-source development on{" "}
-                      <a href="https://github.com/dappnode">Github</a>
-                      </div>
-                  </div>
-                </li>
-                <li {...maxOnMobile} className="card text-center">
-                  <div className="card-header">
-                    <FontAwesome name="download" size="5x" />
-                  </div>
-                    <div className="card-body">
-                      <div className="card-text">
-                        Try it yourself!{" "}
-                        <a href="https://github.com/dappnode" className="btn btn-warning">Install</a>
-                      </div>
-                    </div>
-                </li>
-                <li {...maxOnMobile} className="card text-center">
-                  <div className="card-header">
-                    <img
-                      src="/img/giveth-logo-black.svg"
-                      className="icon"
-                      alt="Giveth Logo"
-                    />
-                  </div>
-                  <div className="card-body">
-                    <div className="card-text">
-                      Transparently tracking contributor payouts via a campaign on <a href="https://alpha.giveth.io/campaigns/OcKJryNwjeidMXi9">Giveth <strong>Alpha</strong></a>
-                    </div>
-                  </div>
-                </li>
-                <li {...maxOnMobile} className="card text-center">
-                  <div className="card-header">
-                    <FontAwesome name="wikipedia-w" size="5x" />
-                  </div>
-                    <div className="card-body">
-                      <div className="card-text">
-                        For more details, please visit the{" "}
-                        <a href="https://github.com/dappnode/DAppNode/wiki">Wiki</a>
-                      </div>
-                    </div>
-                </li>
-                <li {...maxOnMobile} className="card text-center">
-                  <div className="card-header">
-                  <img
-                      src="/img/riot-logo.svg"
-                      className="icon"
-                      alt="Riot.im logo"
-                    />
-                  </div>
-                  <div className="card-body">
-                    <div className="card-text">
-                      Talk to us on{" "}
-                      <a href="https://riot.im/app/#/room/#DAppNode:matrix.org" className="btn btn-warning">Riot.im</a>
-                    </div>
-                  </div>
-                </li>
-                <li {...maxOnMobile} className="card text-center">
-                  <div className="card-header">
-                    <FontAwesome name="heart" size="5x" />
-                  </div>
-                  <div className="card-body">
-                    <div className="card-text">
-                      By donating to this project, you directly fund the
-                      development of DAppNode.
-                    </div>
-                  </div>
-                </li>
-              </ol>
-
-            <div {...maxOnMobile} className="flex-column justify-content-center donationColumn">
+          <div
+            {...maxOnMobile}
+            className="flex-column justify-content-center donationColumn"
+          >
             <img
               src="/img/ways-to-donate.svg"
               className="img-fluid typelogo-donate"
@@ -414,9 +460,8 @@ class App extends Component {
               <strong className="color-main-accent">{donationAddress}</strong>
             </div>
           </div>
-
         </div>
-            
+
         <div {...responsiveness} className="flex-row d-flex amount">
           <div className="flex-column margin">
             <strong>Amount donated </strong>
@@ -453,7 +498,10 @@ class App extends Component {
                     <td>{item.from} </td>
                     <td>{myweb3.utils.fromWei(item.value)} ETH</td>
                     <td>
-                      <Emojify>{myweb3.utils.hexToAscii(item.input)}</Emojify>
+                      <Emojify>
+                        {item.input.length &&
+                          myweb3.utils.hexToAscii(item.input)}
+                      </Emojify>
                     </td>
                     <td>
                       {item.hash.map((txHash, index) => (
