@@ -351,7 +351,7 @@ class App extends Component {
                 <div className="card-text">
                   Try it yourself!{" "}
                   <a
-                    href="https://github.com/dappnode"
+                    href="https://github.com/dappnode/Dappnode/wiki/DappNode-Installation-Guide"
                     className="btn btn-warning"
                   >
                     Install
