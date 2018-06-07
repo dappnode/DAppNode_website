@@ -196,7 +196,7 @@ class App extends Component {
           // tx was not successful - skip it.
           return acc;
         }
-        if (cur.from == donationAddress) {
+        if (cur.from === donationAddress) {
           // tx was outgoing - don't add it in
           return acc;
         }
