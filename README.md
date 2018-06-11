@@ -4,4 +4,4 @@ A new website for the DAppNode project is currently under construction on the ma
 
 # About
 
-This is a `reactjs` based application, cloned from https://github.com/giveth/donati
+This is a `reactjs` based application, cloned from https://github.com/giveth/donation-leaderboard/
