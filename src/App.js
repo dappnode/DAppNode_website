@@ -662,12 +662,12 @@ class App extends Component {
               </li>
               <li {...maxOnMobile} className="card text-center">
                 <div className="card-header">
-                  <img src="/img/team/emex.png" className="icon" alt="" />
+                  <img src="/img/team/yalor.jpg" className="icon" alt="" />
                 </div>
                 <div className="card-body">
                   <div className="card-text">
-                    Emex <br />
-                    <em>Hardware Lead</em>
+                    Yalor <br />
+                    <em>Comms</em>
                   </div>
                 </div>
               </li>
