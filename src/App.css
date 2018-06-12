@@ -89,7 +89,6 @@ thead {
 }
 
 .App {
-  background-color: #whitesmoke;
   max-width: 100vw;
   min-height: 100vh;
   padding: 0px;
@@ -133,6 +132,7 @@ thead {
   background-size: cover;
   background-position: bottom;
   position: sticky;
+  z-index: -2;
 
 }
 
@@ -283,14 +283,14 @@ thead {
 .content-section h1 {
   padding-top: 2rem;
   font-weight: 800;
-  padding-bot: 2rem;
+  padding-bottom: 2rem;
 }
 
 .content-section h1 .special {
   color: #2FBCB2;
 }
 
-.content-section p {;
+.content-section p {
   text-align: center;
 }
 
@@ -335,7 +335,7 @@ em {
   font-size: 4rem;
   padding-top: 2rem;
   font-weight: 800;
-  padding-bot: 2rem;
+  padding-bottom: 2rem;
 }
 
 .middleBlock h1 .special {
@@ -388,4 +388,12 @@ em {
 .last-section {
   min-height: 5vh;
   text-align: center;
+}
+
+.particles {
+  position: absolute;
+  width: 99vw;
+  height: 100vh;
+  z-index: -1;
+  overflow-x: hidden;
 }
