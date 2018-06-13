@@ -1,6 +1,7 @@
 {
-  "name": "donation-leaderboard",
-  "version": "0.2.0",
+  "name": "DAppNode-website",
+  "version": "0.1.0",
+  "homepage" : "https://dappnode.io/",
   "private": true,
   "dependencies": {
     "glamor": "^2.20.40",
