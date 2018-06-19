@@ -256,10 +256,10 @@ thead {
 .intro-column a {
   align-self: flex-start;
   margin: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: Overpass, Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  min-height: 2.8rem;
+  height: 3.4rem;
+  padding: 10px 20px 10px 20px;
 }
 
 .intro-column .btn-light,
