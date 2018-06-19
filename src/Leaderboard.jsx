@@ -29,19 +29,22 @@ export default class Leaderboard extends Component {
   render() {
     const rows = this.state.ethlist
       .sort((a, b) => b.value - a.value)
-      .map((tx, i) => (
-        <tr key={i} className="Entry">
-          <td>{i + 1} </td>
-          <td>{tx.address} </td>
-          <td>{tx.value} ETH</td>
-          <td>
-            <Emojify>{tx.message}</Emojify>
-          </td>
-          <td>
-            <a href={tx.link}>link</a>
-          </td>
-        </tr>
-      ));
+      .map((tx, i) => {
+        const linkList = tx.links.map((link, j) => (
+          <a href={link}>[{j + 1}]</a>
+        ));
+        return (
+          <tr key={i} className="Entry">
+            <td>{i + 1} </td>
+            <td>{tx.address} </td>
+            <td>{tx.value} ETH</td>
+            <td>
+              <Emojify>{tx.message}</Emojify>
+            </td>
+            <td>{linkList}</td>
+          </tr>
+        );
+      });
 
     return (
       <table className="table">

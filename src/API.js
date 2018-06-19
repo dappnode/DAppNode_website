@@ -29,7 +29,8 @@ function getPastDonations() {
       fromBlock: deploymentBlock,
       toBlock: "latest"
     })
-    .then(ParseEvents);
+    .then(ParseEvents)
+    .then(AggregateEvents);
 }
 
 function getBalance() {
@@ -53,6 +54,25 @@ function ParseEvents(events) {
       })
     )
   );
+}
+
+function AggregateEvents(eventList) {
+  const Aggr = {};
+  eventList.forEach(event => {
+    if (Aggr.hasOwnProperty(event.address)) {
+      Aggr[event.address].value += parseFloat(event.value);
+      Aggr[event.address].message = event.message;
+      Aggr[event.address].links.push(event.link);
+    } else {
+      Aggr[event.address] = {
+        address: event.address,
+        value: parseFloat(event.value),
+        message: event.message,
+        links: [event.link]
+      };
+    }
+  });
+  return Object.getOwnPropertyNames(Aggr).map(addr => Aggr[addr]);
 }
 
 function subscribeToDonations(callback) {
