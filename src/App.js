@@ -561,8 +561,8 @@ class App extends Component {
             />
             <div>
               DAppNode is using{" "}
-              <a href="https://alpha.giveth.io/campaigns/OcKJryNwjeidMXi9">
-                Giveth <strong>Alpha</strong>
+              <a href="https://beta.giveth.io/campaigns/5b44b198647f33526e67c262">
+                Giveth <strong>Beta</strong>
               </a>{" "}
               <br /> to transparently track contributor payouts
             </div>
