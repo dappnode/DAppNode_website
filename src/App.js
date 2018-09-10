@@ -569,6 +569,39 @@ class App extends Component {
           </div>
         </div>
 
+        <div className="justify-content-center text-center bg-light-grey">
+          <h5 style={{ margin: 0, opacity: 0.6 }}>FUNDED BY</h5>
+        </div>
+        <div
+          {...responsiveness}
+          className="flex-row d-flex justify-content-center footer bg-light-grey"
+        >
+          <div className="flex-column d-flex text-center fundedby-box">
+            <img
+              src="/img/efg-logo-only.png"
+              className="icon icon-fundedby"
+              alt="EFG Logo"
+            />
+            <div>Ethereum Foundation</div>
+          </div>
+          <div className="flex-column d-flex text-center fundedby-box">
+            <img
+              src="/img/aragon.png"
+              className="icon icon-fundedby"
+              alt="Aragon Logo"
+            />
+            <div>Aragon Nest</div>
+          </div>
+          <div className="flex-column d-flex text-center fundedby-box">
+            <img
+              src="/img/ecf.png"
+              className="icon icon-fundedby"
+              alt="ECF Logo"
+            />
+            <div>Ethereum Community Fund</div>
+          </div>
+        </div>
+
         <div className="flex-column d-flex justify-content-center align-content-middle bg-blue last-section">
           <span>
             <strong className="copyright">

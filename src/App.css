@@ -159,6 +159,21 @@ thead {
   margin-bottom: 2rem;
 }
 
+.icon-fundedby {
+  width: 100px;
+  height: 100px;
+  border-radius: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.fundedby-box {
+  width: 150px;
+  opacity: 0.5;
+  margin: 30px;
+}
+
 .media {
   display: flex;
   max-width: 450px;
@@ -399,4 +414,3 @@ em {
 .word-wrap .color-main-accent a {
   color: white;
 }
-
