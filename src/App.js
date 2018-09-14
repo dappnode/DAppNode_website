@@ -576,30 +576,42 @@ class App extends Component {
           {...responsiveness}
           className="flex-row d-flex justify-content-center footer bg-light-grey"
         >
-          <div className="flex-column d-flex text-center fundedby-box">
-            <img
-              src="/img/efg-logo-only.png"
-              className="icon icon-fundedby"
-              alt="EFG Logo"
-            />
-            <div>Ethereum Foundation</div>
-          </div>
-          <div className="flex-column d-flex text-center fundedby-box">
-            <img
-              src="/img/aragon.png"
-              className="icon icon-fundedby"
-              alt="Aragon Logo"
-            />
-            <div>Aragon Nest</div>
-          </div>
-          <div className="flex-column d-flex text-center fundedby-box">
-            <img
-              src="/img/ecf.png"
-              className="icon icon-fundedby"
-              alt="ECF Logo"
-            />
-            <div>Ethereum Community Fund</div>
-          </div>
+          <a href="https://blog.ethereum.org/2018/08/17/ethereum-foundation-grants-update-wave-3/">
+            <div className="flex-column d-flex text-center fundedby-box">
+              <img
+                src="/img/efg-logo-only.png"
+                className="icon fundedby-icon"
+                alt="EFG Logo"
+              />
+              <div className="fundedby-text">Ethereum Foundation</div>
+            </div>
+          </a>
+          <a
+            className="fundedby-link"
+            href="https://blog.aragon.org/aragon-nest-second-round-of-grants/#dappnode"
+          >
+            <div className="flex-column d-flex text-center fundedby-box">
+              <img
+                src="/img/aragon.png"
+                className="icon fundedby-icon"
+                alt="Aragon Logo"
+              />
+              <div className="fundedby-text">Aragon Nest</div>
+            </div>
+          </a>
+          <a
+            className="fundedby-link"
+            href="https://ecf.network/"
+          >
+            <div className="flex-column d-flex text-center fundedby-box">
+              <img
+                src="/img/ecf.png"
+                className="icon fundedby-icon"
+                alt="ECF Logo"
+              />
+              <div className="fundedby-text">Ethereum Community Fund</div>
+            </div>
+          </a>
         </div>
 
         <div className="flex-column d-flex justify-content-center align-content-middle bg-blue last-section">

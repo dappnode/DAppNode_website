@@ -159,7 +159,7 @@ thead {
   margin-bottom: 2rem;
 }
 
-.icon-fundedby {
+.fundedby-icon {
   width: 100px;
   height: 100px;
   border-radius: 0px;
@@ -168,10 +168,29 @@ thead {
   margin-bottom: 2rem;
 }
 
+.fundedby-text {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
 .fundedby-box {
   width: 150px;
   opacity: 0.5;
   margin: 30px;
+  -webkit-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.fundedby-box:hover {
+  opacity: 0.7;
 }
 
 .media {
