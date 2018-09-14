@@ -569,6 +569,51 @@ class App extends Component {
           </div>
         </div>
 
+        <div className="justify-content-center text-center bg-light-grey">
+          <h5 style={{ margin: 0, opacity: 0.6 }}>FUNDED BY</h5>
+        </div>
+        <div
+          {...responsiveness}
+          className="flex-row d-flex justify-content-center footer bg-light-grey"
+        >
+          <a href="https://blog.ethereum.org/2018/08/17/ethereum-foundation-grants-update-wave-3/">
+            <div className="flex-column d-flex text-center fundedby-box">
+              <img
+                src="/img/efg-logo-only.png"
+                className="icon fundedby-icon"
+                alt="EFG Logo"
+              />
+              <div className="fundedby-text">Ethereum Foundation</div>
+            </div>
+          </a>
+          <a
+            className="fundedby-link"
+            href="https://blog.aragon.org/aragon-nest-second-round-of-grants/#dappnode"
+          >
+            <div className="flex-column d-flex text-center fundedby-box">
+              <img
+                src="/img/aragon.png"
+                className="icon fundedby-icon"
+                alt="Aragon Logo"
+              />
+              <div className="fundedby-text">Aragon Nest</div>
+            </div>
+          </a>
+          <a
+            className="fundedby-link"
+            href="https://ecf.network/"
+          >
+            <div className="flex-column d-flex text-center fundedby-box">
+              <img
+                src="/img/ecf.png"
+                className="icon fundedby-icon"
+                alt="ECF Logo"
+              />
+              <div className="fundedby-text">Ethereum Community Fund</div>
+            </div>
+          </a>
+        </div>
+
         <div className="flex-column d-flex justify-content-center align-content-middle bg-blue last-section">
           <span>
             <strong className="copyright">

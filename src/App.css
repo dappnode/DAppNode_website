@@ -159,6 +159,40 @@ thead {
   margin-bottom: 2rem;
 }
 
+.fundedby-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.fundedby-text {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
+.fundedby-box {
+  width: 150px;
+  opacity: 0.5;
+  margin: 30px;
+  -webkit-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.fundedby-box:hover {
+  opacity: 0.7;
+}
+
 .media {
   display: flex;
   max-width: 450px;
@@ -399,4 +433,3 @@ em {
 .word-wrap .color-main-accent a {
   color: white;
 }
-
