@@ -161,7 +161,7 @@ class App extends Component {
         >
           <div className="flex-column d-flex">
             <img
-              src="/img/dappnode-logo.svg"
+              src="/img/dappnode-logo-text.png"
               className="typelogo img-fluid"
               alt="DAppNode Logo"
             />
@@ -474,6 +474,17 @@ class App extends Component {
                   <div className="card-text">
                     DAppLion <br />
                     <em>Front-End Lead</em>
+                  </div>
+                </div>
+              </li>
+              <li {...maxOnMobile} className="card text-center">
+                <div className="card-header">
+                  <img src="/img/team/vdo.jpeg" className="icon" alt="" />
+                </div>
+                <div className="card-body">
+                  <div className="card-text">
+                    VDO <br />
+                    <em>DevOps Lead</em>
                   </div>
                 </div>
               </li>

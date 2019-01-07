@@ -220,8 +220,8 @@ a:active {
 }
 
 .typelogo {
-  padding: 2rem 2rem 2rem 2rem;
-  width: 380px;
+  margin: 2rem 2rem 2rem 2rem;
+  width: 15rem;
 }
 
 .typelogo-donate {
