@@ -1,34 +1,57 @@
 {
-  "name": "DAppNode-website",
-  "version": "0.1.0",
-  "homepage": "https://dappnode.io/",
+  "name": "DAppNode",
   "private": true,
+  "description": "DAppNode connects the decentralized internet by allowing a user to conveniently host P2P clients.",
+  "version": "0.0.1",
+  "author": "Anish Agnihotri <contact@anishagnihotri.com>",
   "dependencies": {
-    "glamor": "^2.20.40",
-    "react": "^16.2.0",
-    "react-collapsible": "^2.2.0",
-    "react-dom": "^16.2.0",
-    "react-emojione": "^5.0.0",
-    "react-fontawesome": "^1.6.1",
-    "react-particles-js": "^2.2.0",
-    "react-responsive": "^4.0.4",
-    "react-scripts": "1.1.1",
-    "web3": "1.0.0-beta.30"
+    "gatsby": "^2.0.76",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-google-fonts": "0.0.4",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.23",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-source-medium": "^2.0.4",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "jquery": "^3.3.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-anchor-link-smooth-scroll": "^1.0.11",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-hover-image": "^1.0.0",
+    "redux": "^4.0.1",
+    "sshpk": "^1.16.1",
+    "video-react": "^0.13.2"
   },
+  "keywords": [
+    "dappnode",
+    "decentralized",
+    "networking",
+    "P2P",
+    "node",
+    "ethereum",
+    "cryptocurrency",
+    "client"
+  ],
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "devDependencies": {
+    "prettier": "^1.15.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/giveth/donation-leaderboard/"
+    "url": "https://github.com/Anish-Agnihotri/dappnode-gatsby"
   },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "prettier": "^1.13.5"
+  "bugs": {
+    "url": "https://github.com/Anish-Agnihotri/dappnode-gatsby/issues"
   }
 }

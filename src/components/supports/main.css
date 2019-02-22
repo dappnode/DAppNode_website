@@ -1,0 +1,39 @@
+/* Supports section styling */
+.supports {
+    background-color: rgb(247, 249, 251);
+    padding-top: 150px; /* Large bottom padding falsified for margin-top to produce under-video effect. */
+    padding-bottom: 45px;
+    margin-top: -150px; /* See above comment. */
+}
+
+.supports > a {
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.supports > a {
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.supports > a > img {
+    height: 75px; /* Fixed height for images, using fixed width throws off EF + ECF logos. */
+    fill: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.supports > p:first-child {
+    color: #b3bec7;
+    font-size: 14px;
+    line-height: 0px;
+    margin-top: 10px;
+}
+
+/* Responiveness for smaller display sizes: */
+@media screen and (max-width: 480px) {
+    .supports > a >img {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
