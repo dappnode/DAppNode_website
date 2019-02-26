@@ -3,63 +3,44 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ lang }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const { name, title, description, keywords } = data.site.siteMetadata
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
-            title='DAppNode'
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            title={name}
+            titleTemplate={`%s | ${title}`}
             meta={[
+              { name: `description`, content: description },
+              { property: `og:title`, content: name },
+              { property: `og:description`, content: description },
+              { property: `og:type`, content: `website` },
+              { property: `og:url`, content: `https://www.dappnode.io` },
+              { property: `og:image`, content: `./logo.png` },
+              { name: `twitter:card`, content: `summary` },
+              { name: `twitter:title`, content: name },
+              { name: `twitter:description`, content: description },
+              // keywords defined as props to the SEO component
+              { name: `keywords`, content: keywords },
+              // Prevent the index.html from being cached, to trigger an immediate update
               {
-                name: `description`,
-                content: metaDescription,
+                'http-equiv': 'cache-control',
+                content: 'no-cache, must-revalidate, post-check=0, pre-check=0',
               },
+              { 'http-equiv': 'cache-control', content: 'max-age=0' },
+              { 'http-equiv': 'expires', content: '0' },
               {
-                property: `og:title`,
-                content: title,
+                'http-equiv': 'expires',
+                content: 'Tue, 01 Jan 1980 1:00:00 GMT',
               },
-              {
-                property: `og:description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:type`,
-                content: `website`,
-              },
-              {
-                name: `twitter:card`,
-                content: `summary`,
-              },
-              {
-                name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
-              },
-              {
-                name: `twitter:title`,
-                content: title,
-              },
-              {
-                name: `twitter:description`,
-                content: metaDescription,
-              },
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
-              .concat(meta)}
+              { 'http-equiv': 'pragma', content: 'no-cache' },
+            ]}
           />
         )
       }}
@@ -69,16 +50,10 @@ function SEO({ description, lang, meta, keywords, title }) {
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
-  keywords: [],
 }
 
 SEO.propTypes = {
-  description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
 }
 
 export default SEO
@@ -89,7 +64,6 @@ const detailsQuery = graphql`
       siteMetadata {
         title
         description
-        author
       }
     }
   }
