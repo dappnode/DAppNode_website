@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang }) {
+function SEO({ lang }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -21,6 +21,8 @@ function SEO({ description, lang }) {
               { property: `og:title`, content: name },
               { property: `og:description`, content: description },
               { property: `og:type`, content: `website` },
+              { property: `og:url`, content: `https://www.dappnode.io` },
+              { property: `og:image`, content: `./logo.png` },
               { name: `twitter:card`, content: `summary` },
               { name: `twitter:title`, content: name },
               { name: `twitter:description`, content: description },
