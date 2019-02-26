@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
+    name: 'DAppNode',
     title: `Your personal node for the decentralized web`,
     description: `DAppNode connects the decentralized internet by allowing a user to conveniently host P2P clients. Run your own node today, and begin enabling censorship free web traffic.`,
-    author: `@gatsbyjs`,
+    keywords: `gatsby, application, react`,
   },
   plugins: [
     `gatsby-plugin-offline`,
@@ -35,13 +36,11 @@ module.exports = {
         limits: 10,
       },
     },
-    { 
+    {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          `Poppins\:300,400,500,700,9000`
-        ]
-      }
-    }
+        fonts: [`Poppins\:300,400,500,700,9000`],
+      },
+    },
   ],
 }
