@@ -11,8 +11,9 @@ const Footer = () => (
       <h1>Ready to get started?</h1>
       <p>Setup your own DAppNode and connect to the decentralized internet.</p>
       <ul>
-        <li><a href={links.install} target='_blank' rel="noopener noreferrer">Install</a></li>
-        <li><a href={links.docs} target='_blank' rel="noopener noreferrer">Documentation</a></li>
+        <li><a href={links.install} className="install" target='_blank' rel="noopener noreferrer">Install</a></li>
+        <li><a href={links.shop} className="docs" target='_blank' rel="noopener noreferrer">Shop</a></li>
+        <li><a href={links.docs} className="docs" target='_blank' rel="noopener noreferrer">Documentation</a></li>
       </ul>
     </div>
     <div>

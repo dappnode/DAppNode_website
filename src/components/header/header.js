@@ -25,7 +25,7 @@ class Header extends React.Component {
           <div>
             <ul>
               <li><a href={links.install} className='install' target='_blank' rel="noopener noreferrer">Install</a></li>
-              <li><AnchorLink href='#communityAnchor'>Community</AnchorLink></li>
+              <li><a href={links.shop} className='docs' target='_blank' rel="noopener noreferrer">Shop</a></li>
               <li><a href={links.docs} target='_blank' rel="noopener noreferrer">Documentation</a></li>
               <li><AnchorLink href='#aboutAnchor'>About</AnchorLink></li>
               <li><AnchorLink href='#headerAnchor'>Home</AnchorLink></li>
@@ -42,7 +42,10 @@ class Header extends React.Component {
               <li><AnchorLink href='#aboutAnchor' onClick={this.toggleMenu}>About</AnchorLink></li>
               <li><a href={links.docs} target='_blank' rel="noopener noreferrer">Documentation</a></li>
               <li><AnchorLink href='#communityAnchor' onClick={this.toggleMenu}>Community</AnchorLink></li>
-              <li><a href={links.install} className='install' target='_blank' rel="noopener noreferrer">Install</a></li>
+              <li>
+                <a href={links.shop} style={{ marginRight: "1rem" }} className='docs' target='_blank' rel="noopener noreferrer">Shop</a>
+                <a href={links.install} className='install' target='_blank' rel="noopener noreferrer">Install</a>
+              </li>
             </ul>
           </div>
         </div>

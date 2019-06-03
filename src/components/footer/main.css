@@ -54,21 +54,21 @@
     text-decoration: none;
 }
 
-.footer > div:first-child > ul > li:first-child > a {
+.footer > div:first-child > ul > .install > a {
     background-color: #2fbcb2;
     color: #fff;
 }
 
-.footer > div:first-child > ul > li:first-child > a:hover {
+.footer > div:first-child > ul > .install > a:hover {
     background-color: #33ccc2;
 }
 
-.footer > div:first-child > ul > li:last-child > a {
+.footer > div:first-child > ul > .docs > a {
     color: #6d6d6d;
     border: 1px solid #6d6d6d;
 }
 
-.footer > div:first-child > ul > li:last-child > a:hover {
+.footer > div:first-child > ul > .docs > a:hover {
     opacity: 0.7;
 }
 
