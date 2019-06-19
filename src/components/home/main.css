@@ -1,96 +1,95 @@
-
 .cta {
-    padding-top: 5px;
-    padding-bottom: 25px;
+  padding-top: 5px;
+  padding-bottom: 25px;
 }
 
 .cta > h1 {
-    color: #291a41;
-    font-size: 40px;
-    font-weight: 500;
+  color: #291a41;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 .cta > p {
-    color: #6d6d6d;
-    font-size: 20px;
-    max-width: 600px;
-    display: inline-block;
-    margin-top: -25px;
+  color: #6d6d6d;
+  font-size: 20px;
+  max-width: 600px;
+  display: inline-block;
+  margin-top: -25px;
 }
 
 .cta > div {
-    max-width: 960px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: auto;
+  max-width: 960px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
 }
 
 .video-react {
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .mobileCTA {
-    display: none;
-    text-align: center;
-    margin: 0px;
+  display: none;
+  text-align: center;
+  margin: 0px;
 }
 
 @media screen and (max-width: 760px) {
-    .cta > h1 {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 40px;
-        margin-top: 0px;
-    }
-    .cta > p {
-        font-size: 15px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: -17px;
-    }
-    .mobileCTA {
-        display: inline-block;
-    }
+  .cta > h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-top: 0px;
+  }
+  .cta > p {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -17px;
+  }
+  .mobileCTA {
+    display: inline-block;
+  }
 }
 
 /* From footer */
 .mobileCTA > ul {
-    list-style-type: none;
-    margin: 10px 0px 25px 0px;
-    padding: 0;
+  list-style-type: none;
+  margin: 10px 0px 25px 0px;
+  padding: 0;
 }
 
 .mobileCTA > ul > li {
-    margin-left: 8px;
-    margin-right: 8px;
-    display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
+  display: inline-block;
 }
 
 .mobileCTA > ul > li > a {
-    padding: 10px 20px 10px 20px;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.1s ease-in-out;
-    border-radius: 25px;
-    text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.1s ease-in-out;
+  border-radius: 25px;
+  text-decoration: none;
 }
 
 .mobileCTA > ul > li:first-child > a {
-    background-color: #2fbcb2;
-    color: #fff;
+  background-color: #2fbcb2;
+  color: #fff;
 }
 
 .mobileCTA > ul > li:first-child > a:hover {
-    background-color: #33ccc2;
+  background-color: #33ccc2;
 }
 
 .mobileCTA > ul > li:last-child > a {
-    border: 1px solid #6d6d6d;
-    color: #6d6d6d;
+  border: 1px solid #6d6d6d;
+  color: #6d6d6d;
 }
 
 .mobileCTA > ul > li:last-child > a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
