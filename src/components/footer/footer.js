@@ -13,18 +13,8 @@ const Footer = () => (
       <ul>
         <li>
           <a
-            href={links.install}
-            className="install"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Install
-          </a>
-        </li>
-        <li>
-          <a
             href={links.shop}
-            className="docs"
+            className="install"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -33,12 +23,12 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href={links.docs}
+            href={links.install}
             className="docs"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Documentation
+            Install
           </a>
         </li>
       </ul>
@@ -46,6 +36,25 @@ const Footer = () => (
     <div>
       <img src={logo} alt="DAppNode logo" />
       <p>DAppNode | Decentralized P2P Networking | &copy; 2019</p>
+    </div>
+    <div className="community">
+      <ul>
+        <li>
+          <a href={links.riot} target="_blank" rel="noopener noreferrer">
+            Riot Chat
+          </a>
+        </li>
+        <li>
+          <a href={links.github} target="_blank" rel="noopener noreferrer">
+            Github
+          </a>
+        </li>
+        <li>
+          <a href={links.twitter} target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 )

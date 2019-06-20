@@ -17,7 +17,7 @@ const IndexPage = () => (
     <Supports />
     <Problems />
     <Solutions />
-    <Community />
+    {/* <Community /> */}
     <Footer />
   </Layout>
 )

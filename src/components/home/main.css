@@ -4,17 +4,18 @@
 }
 
 .cta > h1 {
-  color: #291a41;
-  font-size: 40px;
+  color: var(--color-dark-gray);
+  font-size: 50px;
   font-weight: 500;
+  margin-bottom: 0px;
 }
 
 .cta > p {
-  color: #6d6d6d;
+  color: var(--color-gray);
   font-size: 20px;
   max-width: 600px;
   display: inline-block;
-  margin-top: -25px;
+  margin: 20px 0 45px 0;
 }
 
 .cta > div {
@@ -31,27 +32,8 @@
 }
 
 .mobileCTA {
-  display: none;
   text-align: center;
   margin: 0px;
-}
-
-@media screen and (max-width: 760px) {
-  .cta > h1 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 40px;
-    margin-top: 0px;
-  }
-  .cta > p {
-    font-size: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: -17px;
-  }
-  .mobileCTA {
-    display: inline-block;
-  }
 }
 
 /* From footer */
@@ -59,6 +41,7 @@
   list-style-type: none;
   margin: 10px 0px 25px 0px;
   padding: 0;
+  margin-bottom: 4rem;
 }
 
 .mobileCTA > ul > li {
@@ -69,7 +52,7 @@
 
 .mobileCTA > ul > li > a {
   padding: 10px 20px 10px 20px;
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: 500;
   transition: 0.1s ease-in-out;
   border-radius: 25px;
@@ -77,17 +60,17 @@
 }
 
 .mobileCTA > ul > li:first-child > a {
-  background-color: #2fbcb2;
+  background-color: var(--color-dappnode);
   color: #fff;
 }
 
 .mobileCTA > ul > li:first-child > a:hover {
-  background-color: #33ccc2;
+  background-color: var(--color-dappnode-hover);
 }
 
 .mobileCTA > ul > li:last-child > a {
-  border: 1px solid #6d6d6d;
-  color: #6d6d6d;
+  border: 1px solid var(--color-gray);
+  color: var(--color-gray);
 }
 
 .mobileCTA > ul > li:last-child > a:hover {

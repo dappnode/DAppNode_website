@@ -10,18 +10,20 @@ import BigPlayButton from 'video-react/lib/components/BigPlayButton'
 
 const Home = () => (
   <div className="section cta">
-    <h1>Infrastructure for the decentralized world</h1>
+    <h1>
+      Infrastructure for <br />the decentralized world
+    </h1>
     <p>The easiest way to run you own nodes, now</p>
     <div className="mobileCTA">
       <ul>
         <li>
-          <a href={links.install} target="_blank" rel="noopener noreferrer">
-            Install
+          <a href={links.shop} target="_blank" rel="noopener noreferrer">
+            Shop
           </a>
         </li>
         <li>
-          <a href={links.docs} target="_blank" rel="noopener noreferrer">
-            Documentation
+          <a href={links.install} target="_blank" rel="noopener noreferrer">
+            Install
           </a>
         </li>
       </ul>

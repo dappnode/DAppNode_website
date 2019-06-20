@@ -1,54 +1,56 @@
 .problems {
-    background-color: rgb(22, 19, 27);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
+  background-color: var(--color-problems-black);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .problems > div {
-    max-width: 1140px;
-    display: inline-block;
+  max-width: 1140px;
+  display: inline-block;
 }
 
 .problems > div > div {
-    display: inline-block;
-    margin: 15px;
-    max-width: 340px;
-    margin-top: 5px;
+  display: inline-block;
+  margin: 15px;
+  max-width: 340px;
+  margin-top: 5px;
 }
 
 .problems > div > div > img {
-    width: 60px;
+  width: 60px;
 }
 
 .problems > div > div > h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 0px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 0px;
 }
 
 .problems > div > div > p {
-    font-size: 16px;
-    line-height: 25px;
-    margin-top: -18px;
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: -18px;
 }
 
 .problems > div > p {
-    color: rgb(22, 19, 27);
-    background-color: #ef7876;
-    width: 100px;
-    display: inline-block;
-    border-radius: 25px;
-    font-weight: 500;
+  color: var(--color-problems-black);
+  background-color: var(--color-problems-strong);
+  width: 100px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 500;
 }
 
 .problems > div > h1 {
-    margin-top: -5px;
+  margin-top: -5px;
 }
 
 /* Responsiveness */
 @media screen and (max-width: 760px) {
-    .problems > div > h1 {
-        line-height: 40px;
-    }
+  .problems > div > h1 {
+    line-height: 40px;
+  }
 }
