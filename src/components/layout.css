@@ -1,3 +1,14 @@
+:root {
+  --color-black: black;
+  --color-dappnode: #2fbcb2;
+  --color-dappnode-hover: #33ccc2;
+  --color-gray: #6d6d6d;
+  --color-dark-gray: #333;
+  --color-light-white: ;
+  --color-problems-black: #161616;
+  --color-problems-strong: #ce514d;
+}
+
 body {
   padding: 0;
   margin: 0;

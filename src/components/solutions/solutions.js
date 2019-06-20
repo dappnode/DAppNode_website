@@ -10,25 +10,29 @@ const cardText = [
   'Easy setup for any user',
   'Run private copies of DApps 24/7',
   'Browse decentralized websites',
-];
+]
 
 const Solutions = () => (
-
-  <div className='section solutions'>
+  <div className="section solutions">
     <p>Solution</p>
-    <h1>Simple node deployment.</h1>
-    <p className='solutionText'>DAppNode bridges the gap between the benefits of hosting a decentralized P2P
-      network, and the difficulty of putting in time and effort to setup your own
-      nodes.</p>
-    <br/>
+    <h1>Your node, plug & play</h1>
+    <p className="solutionText">
+      DAppNode facilitates running nodes, DApps and hosting P2P networks and
+      economies
+    </p>
+    <br />
     <div>
       {cardText.map((value, index) => {
-        return <div key={index}>
-          <div><img src={checkmark} alt='checkmark'/></div>
-          <div>
-            <p>{value}</p>
+        return (
+          <div key={index}>
+            <div>
+              <img src={checkmark} alt="checkmark" />
+            </div>
+            <div>
+              <p>{value}</p>
+            </div>
           </div>
-        </div>
+        )
       })}
     </div>
     <h5>+ many more benefits...</h5>

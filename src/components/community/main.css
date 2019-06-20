@@ -1,117 +1,117 @@
 .community {
-    margin-top: 25px;
-    margin-bottom: 60px; /* temporary padding till i add blog */
+  margin-top: 50px;
+  margin-bottom: 60px; /* temporary padding till i add blog */
 }
-.community>p {
-    color: #53546a;
-    font-size: 20px;
-    max-width: 600px;
-    display: inline-block;
-    margin-bottom: 30px;
-    margin-top: -20px;
+.community > p {
+  color: var(--color-gray);
+  font-size: 20px;
+  max-width: 600px;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: -20px;
 }
-.community>ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-top: -25px;
+.community > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: -25px;
 }
-.community>ul>li {
-    display: inline;
-    margin-left: 10px;
-    margin-right: 10px;
+.community > ul > li {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.community>ul>li>a {
-    text-decoration: none;
-    color: #2fbcb2;
-    font-size: 18px;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: 0.15s ease-in-out;
+.community > ul > li > a {
+  text-decoration: none;
+  color: var(--color-dappnode);
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: 0.15s ease-in-out;
 }
-.community>ul>li>a:hover {
-    border-bottom-color: #2fbcb2;
+.community > ul > li > a:hover {
+  border-bottom-color: var(--color-dappnode);
 }
 .blog {
-    margin-top: 40px;
-    padding-bottom: 5px;
-    max-width: 1000px;
-    display: inline-block !important;
+  margin-top: 40px;
+  padding-bottom: 5px;
+  max-width: 1000px;
+  display: inline-block !important;
 }
 .blog > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .blog > a > div {
-    background-color: #fff;
-    width: 300px;
-    height: 300px;
-    -webkit-box-shadow: 0px 0px 13px -2px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 0px 13px -2px rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 13px -2px rgba(0,0,0,0.3);
-    display: inline-block;
-    border-radius: 5px;
-    margin: 10px;
-    vertical-align: top;
+  background-color: #fff;
+  width: 300px;
+  height: 300px;
+  -webkit-box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  border-radius: 5px;
+  margin: 10px;
+  vertical-align: top;
 }
 .blog > a > div:hover {
-    -webkit-box-shadow: 0px 0px 13px -2px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 13px -2px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 13px -2px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 13px -2px rgba(0, 0, 0, 0.5);
 }
 .blog > a > div > div:first-child {
-    height: 200px;
-    width: 300px;
-    display: inline-block;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
+  height: 200px;
+  width: 300px;
+  display: inline-block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 .blog > a > div > div:last-child {
-    height: 100px;
-    width: 300px;
-    display: inline-block;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin: 0px;
-    text-align: center;
+  height: 100px;
+  width: 300px;
+  display: inline-block;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0px;
+  text-align: center;
 }
 
 .blog > a > div > div:last-child > h3 {
-    color: #333;
-    padding: 0px 10px 0px 10px;
+  color: var(--color-dark-gray);
+  padding: 0px 10px 0px 10px;
 }
 
 /* TODO: Temporary hard-coded till fixed */
 .blog1 {
-    background-image: url("../../images/temp/blog1.jpg");
+  background-image: url('../../images/temp/blog1.jpg');
 }
 .blog2 {
-    background-image: url("../../images/temp/blog2.jpg");
+  background-image: url('../../images/temp/blog2.jpg');
 }
 .blog3 {
-    background-image: url("../../images/temp/blog3.jpg");
+  background-image: url('../../images/temp/blog3.jpg');
 }
 .blog4 {
-    background-image: url("../../images/temp/blog4.jpg");
+  background-image: url('../../images/temp/blog4.jpg');
 }
 .blog5 {
-    background-image: url("../../images/temp/blog5.jpg");
+  background-image: url('../../images/temp/blog5.jpg');
 }
 .blog6 {
-    background-image: url("../../images/temp/blog6.jpg");
+  background-image: url('../../images/temp/blog6.jpg');
 }
 
 /* Responsiveness */
 @media screen and (max-width: 760px) {
-    .community > h1 {
-        line-height: 40px;
-    }
-    .community>p {
-        font-size: 16px;
-        margin-top: -10px;
-        padding-left: 10px;
-        padding-right: 10px;
-    } 
+  .community > h1 {
+    line-height: 40px;
+  }
+  .community > p {
+    font-size: 16px;
+    margin-top: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

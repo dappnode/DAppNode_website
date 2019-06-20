@@ -14,11 +14,11 @@ const IndexPage = () => (
   <Layout>
     <SEO />
     <Home />
-    <Supports />
     <Problems />
     <Solutions />
-    <Community />
+    {/* <Community /> */}
     <Footer />
+    <Supports />
   </Layout>
 )
 

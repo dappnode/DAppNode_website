@@ -1,94 +1,130 @@
 .footer {
-    background-color: rgb(247, 249, 251);
+  background-color: rgb(247, 249, 251);
+  margin-top: 4rem;
 }
 
 .footer > div:first-child {
-    border-bottom-left-radius: 50% 70%;
-    border-bottom-right-radius: 50% 70%;
-    background-color: #fff;
-    margin-top: -25px;
-    padding-bottom: 100px;
+  border-bottom-left-radius: 50% 70%;
+  border-bottom-right-radius: 50% 70%;
+  background-color: #fff;
+  margin-top: -25px;
+  padding-bottom: 100px;
 }
 
 .footer > div:first-child > p {
-    color: #6d6d6d;
-    font-size: 20px;
-    max-width: 600px;
-    display: inline-block;
-    margin-bottom: 30px;
-    margin-top: -20px;
+  color: var(--color-gray);
+  font-size: 20px;
+  max-width: 600px;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: -20px;
 }
 
 .footer > div:last-child {
-    text-align: center;
-    margin-top: 35px;
-    margin-bottom: 35px;
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 35px;
 }
 
 .footer > div:last-child > img {
-    width: 350px;
+  width: 350px;
 }
 
 .footer > div:last-child > p {
-    margin: 0;
+  margin: 0;
 }
 
 .footer > div:first-child > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer > div:first-child > ul > li {
-    margin-left: 8px;
-    margin-right: 8px;
-    display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
+  display: inline-block;
 }
 
 .footer > div:first-child > ul > li > a {
-    padding: 10px 20px 10px 20px;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.1s ease-in-out;
-    border-radius: 25px;
-    text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: 0.1s ease-in-out;
+  border-radius: 25px;
+  text-decoration: none;
 }
 
 .footer > div:first-child > ul > .install > a {
-    background-color: #2fbcb2;
-    color: #fff;
+  background-color: var(--color-dappnode);
+  color: #fff;
 }
 
 .footer > div:first-child > ul > .install > a:hover {
-    background-color: #33ccc2;
+  background-color: var(--color-dappnode-hover);
 }
 
 .footer > div:first-child > ul > .docs > a {
-    color: #6d6d6d;
-    border: 1px solid #6d6d6d;
+  color: var(--color-gray);
+  border: 1px solid var(--color-gray);
 }
 
 .footer > div:first-child > ul > .docs > a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 /* Responsiveness */
 @media screen and (max-width: 760px) {
-    .footer > h1 {
-        line-height: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .footer > div:first-child > p {
-        font-size: 16px;
-        margin-top: -20px;
-        padding-left: 15px;
-        padding-right: 15px;
-    } 
-    .footer > div:last-child > p {
-        padding-left: 30px;
-        padding-right: 30px;
-        margin-top: -15px;
-        color: #6d6d6d;
-    }
+  .footer > h1 {
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .footer > div:first-child > p {
+    font-size: 16px;
+    margin-top: -20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .footer > div:last-child > p {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: -15px;
+    color: var(--color-gray);
+  }
+}
+
+.community {
+  margin-top: 25px;
+  margin-bottom: 60px; /* temporary padding till i add blog */
+}
+.community > p {
+  color: var(--color-gray);
+  font-size: 20px;
+  max-width: 600px;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+.community > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: -25px;
+}
+.community > ul > li {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.community > ul > li > a {
+  text-decoration: none;
+  color: var(--color-dappnode);
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: 0.15s ease-in-out;
+}
+.community > ul > li > a:hover {
+  border-bottom-color: var(--color-dappnode);
 }
