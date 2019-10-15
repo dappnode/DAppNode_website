@@ -11,7 +11,7 @@ import BigPlayButton from 'video-react/lib/components/BigPlayButton'
 const Home = () => (
   <div className="section cta">
     <h1>Infrastructure for the decentralized world</h1>
-    <p>The easiest way to run you own nodes, now</p>
+    <p>The easiest way to run your own nodes, now</p>
     <div className="mobileCTA">
       <ul>
         <li>
