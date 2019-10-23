@@ -30,13 +30,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `@DAppNode`,
-        limits: 10,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [`Poppins\:300,400,500,700,9000`],
