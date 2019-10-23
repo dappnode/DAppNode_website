@@ -7,7 +7,6 @@ import Home from '../components/home/home'
 import Supports from '../components/supports/supports'
 import Problems from '../components/problems/problems'
 import Solutions from '../components/solutions/solutions'
-import Community from '../components/community/community'
 import Footer from '../components/footer/footer'
 
 const IndexPage = () => (
@@ -16,7 +15,6 @@ const IndexPage = () => (
     <Home />
     <Problems />
     <Solutions />
-    {/* <Community /> */}
     <Footer />
     <Supports />
   </Layout>
