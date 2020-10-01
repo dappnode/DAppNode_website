@@ -9,7 +9,7 @@ import toolbox from '../../images/vectors/toolbox.svg'
 const Problems = () => (
   <div className="section problems" id="aboutAnchor">
     <div>
-      <p>Problems</p>
+      <p>Challenges</p>
       <h1>We have a decentralization bottleneck</h1>
       <div>
         <img src={toolbox} alt="Toolbox" />
