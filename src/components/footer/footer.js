@@ -40,8 +40,8 @@ const Footer = () => (
     <div className="community">
       <ul>
         <li>
-          <a href={links.riot} target="_blank" rel="noopener noreferrer">
-            Riot Chat
+          <a href={links.discourse} target="_blank" rel="noopener noreferrer">
+            Discourse Forum
           </a>
         </li>
         <li>
