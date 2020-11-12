@@ -22,10 +22,12 @@
   opacity: 0.3;
 }
 
-.supports > p:first-child {
+.supports > p:first-child,
+.supports > a > p {
   color: #b3bec7;
   font-size: 14px;
-  line-height: 0px;
+  margin: auto;
+  width: 40%;
   margin-top: 10px;
 }
 
