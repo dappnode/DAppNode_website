@@ -16,9 +16,10 @@
 
 .supports > a > img {
   height: 45px; /* Fixed height for images, using fixed width throws off EF + ECF logos. */
+  width: 80px;
   fill: #fff;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
   opacity: 0.3;
 }
 
