@@ -41,7 +41,7 @@ const Footer = () => (
       <ul>
         <li>
           <a href={links.discourse} target="_blank" rel="noopener noreferrer">
-            Discourse Forum
+            Forum
           </a>
         </li>
         <li>

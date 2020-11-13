@@ -15,17 +15,21 @@
 }
 
 .supports > a > img {
-  height: 45px; /* Fixed height for images, using fixed width throws off EF + ECF logos. */
+  height: 60px; /* Fixed height for images, using fixed width throws off EF + ECF logos. */
+  width: 110px;
   fill: #fff;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.3;
 }
 
-.supports > p:first-child {
+.supports > p:first-child,
+.supports > a > p {
   color: #b3bec7;
   font-size: 14px;
-  line-height: 0px;
+  margin: auto;
+  width: 40%;
   margin-top: 10px;
 }
 
