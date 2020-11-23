@@ -4,7 +4,8 @@ import './main.css'
 
 // Import png's
 import euro from '../../images/eu.png'
-import ngiTrust from '../../images/ngiTrust.png'
+import ngiTrust from '../../images/ngiTrust.jpeg'
+import blockis from '../../images/blockis.png'
 
 // Import package to handle image hover-over color change.
 import HoverImage from 'react-hover-image'
@@ -14,14 +15,12 @@ import ef from '../../images/vectors/ef.svg'
 import aragon from '../../images/vectors/nest.svg'
 import giveth from '../../images/vectors/giveth.svg'
 import ecf from '../../images/vectors/ecf.svg'
-import blockis from '../../images/vectors/blockis.svg'
 
 // Import seperate images (hover color).
 import efhover from '../../images/vectors/efhover.svg'
 import givethhover from '../../images/vectors/givethhover.svg'
 import aragonhover from '../../images/vectors/nesthover.svg'
 import ecfhover from '../../images/vectors/ecfhover.svg'
-import blockishover from '../../images/vectors/blockishover.svg'
 
 // Declare supports section.
 const Supports = () => (
@@ -54,11 +53,8 @@ const Supports = () => (
     </a>
 
     <br />
-
-    <a href="https://blockis.eu/" target="_blank" rel="noopener noreferrer">
-      <img src={euro} />
-      <HoverImage src={blockis} hoverSrc={blockishover} alt="Block IS" />
-    </a>
+    <img src={euro} />
+    <img src={blockis} />
     <img src={ngiTrust} />
     <a>
       <p>
