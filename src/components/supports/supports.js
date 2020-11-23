@@ -2,6 +2,10 @@
 import React from 'react'
 import './main.css'
 
+// Import png's
+import euro from '../../images/eu.png'
+import ngiTrust from '../../images/ngiTrust.png'
+
 // Import package to handle image hover-over color change.
 import HoverImage from 'react-hover-image'
 
@@ -11,7 +15,6 @@ import aragon from '../../images/vectors/nest.svg'
 import giveth from '../../images/vectors/giveth.svg'
 import ecf from '../../images/vectors/ecf.svg'
 import blockis from '../../images/vectors/blockis.svg'
-import euro from '../../images/vectors/eu-flag.svg'
 
 // Import seperate images (hover color).
 import efhover from '../../images/vectors/efhover.svg'
@@ -19,7 +22,6 @@ import givethhover from '../../images/vectors/givethhover.svg'
 import aragonhover from '../../images/vectors/nesthover.svg'
 import ecfhover from '../../images/vectors/ecfhover.svg'
 import blockishover from '../../images/vectors/blockishover.svg'
-import eurohoover from '../../images/vectors/eu-flaghoover.svg'
 
 // Declare supports section.
 const Supports = () => (
@@ -54,10 +56,15 @@ const Supports = () => (
     <br />
 
     <a href="https://blockis.eu/" target="_blank" rel="noopener noreferrer">
-      <img src={euro}></img>
+      <img src={euro} />
       <HoverImage src={blockis} hoverSrc={blockishover} alt="Block IS" />
+    </a>
+    <img src={ngiTrust} />
+    <a>
       <p>
-        This project has indirectly received funding from the European Union’s
+        This project has received funding from the European Union’s Horizon 2020
+        research and innovation programme under the NGI_TRUST grant agreement no
+        825618, and indirectly received funding from the European Union’s
         Horizon 2020 research and innovation programme under project Block.IS
         (grant agreement No 824509).
       </p>
