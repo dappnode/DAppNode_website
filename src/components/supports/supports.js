@@ -4,8 +4,8 @@ import './main.css'
 
 // Import png's
 import euro from '../../images/eu.png'
-import ngiTrust from '../../images/ngiTrust.jpeg'
 import blockis from '../../images/blockis.png'
+import ngiTrust from '../../images/ngiTrust.png'
 
 // Import package to handle image hover-over color change.
 import HoverImage from 'react-hover-image'
@@ -53,9 +53,20 @@ const Supports = () => (
     </a>
 
     <br />
-    <img src={euro} />
-    <img src={blockis} />
-    <img src={ngiTrust} />
+    <a href="https://europa.eu/" target="_blank" rel="noopener noreferrer">
+      <HoverImage src={euro} hoverSrc={euro} alt="Europe" />
+    </a>
+    <a href="https://blockis.eu/" target="_blank" rel="noopener noreferrer">
+      <HoverImage src={blockis} hoverSrc={blockis} alt="Block IS" />
+    </a>
+    <a
+      href="https://www.ngi.eu/ngi-projects/ngi-trust/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <HoverImage src={ngiTrust} hoverSrc={ngiTrust} alt="NGI trust" />
+    </a>
+
     <a>
       <p>
         This project has received funding from the European Union’s Horizon 2020
