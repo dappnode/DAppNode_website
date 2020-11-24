@@ -16,21 +16,20 @@
 
 .supports > a > img {
   /* Fixed height for images, using fixed width throws off EF + ECF logos. */
-  padding-top: 10%;
-  height: 75px;
-  width: 75px;
+  height: 40%;
+  width: 40%;
   fill: #fff;
-  padding-left: 30%;
-  padding-right: 30%;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 15%;
+  margin-top: 15%;
+  margin-left: 15%;
+  margin-right: 15%;
   opacity: 0.3;
 }
 
 .supports > div > img {
-  height: 50px;
+  height: 10%;
   width: 60px;
   fill: #fff;
   padding-left: 2%;
@@ -41,15 +40,13 @@
 }
 
 .supports > div > a > img {
-  height: 50px;
-  width: 160px;
+  height: 30%;
+  width: 10%;
   fill: #fff;
   padding-left: 2%;
   padding-right: 2%;
   margin-top: 3%;
   margin-bottom: 3%;
-  margin-left: 15px;
-  margin-right: 15px;
   opacity: 0.3;
 }
 
