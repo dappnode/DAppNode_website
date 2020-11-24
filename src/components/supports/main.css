@@ -18,7 +18,19 @@
   /* Fixed height for images, using fixed width throws off EF + ECF logos. */
   padding-top: 20%;
   height: 50px;
-  width: 70px;
+  width: 90px;
+  fill: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0.3;
+}
+
+.supports > img {
+  height: 50px;
+  width: 60px;
   fill: #fff;
   padding-left: 15px;
   padding-right: 15px;

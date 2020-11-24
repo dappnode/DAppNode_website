@@ -53,9 +53,8 @@ const Supports = () => (
     </a>
 
     <br />
-    <a href="https://europa.eu/" target="_blank" rel="noopener noreferrer">
-      <HoverImage src={euro} hoverSrc={euro} alt="Europe" />
-    </a>
+    <img src={euro} />
+
     <a href="https://blockis.eu/" target="_blank" rel="noopener noreferrer">
       <HoverImage src={blockis} hoverSrc={blockis} alt="Block IS" />
     </a>
