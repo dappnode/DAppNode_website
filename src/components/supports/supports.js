@@ -53,18 +53,20 @@ const Supports = () => (
     </a>
 
     <br />
-    <img src={euro} />
 
-    <a href="https://blockis.eu/" target="_blank" rel="noopener noreferrer">
-      <HoverImage src={blockis} hoverSrc={blockis} alt="Block IS" />
-    </a>
-    <a
-      href="https://www.ngi.eu/ngi-projects/ngi-trust/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <HoverImage src={ngiTrust} hoverSrc={ngiTrust} alt="NGI trust" />
-    </a>
+    <div>
+      <img src={euro} />
+      <a href="https://blockis.eu/" target="_blank" rel="noopener noreferrer">
+        <HoverImage src={blockis} hoverSrc={blockis} alt="Block IS" />
+      </a>
+      <a
+        href="https://www.ngi.eu/ngi-projects/ngi-trust/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <HoverImage src={ngiTrust} hoverSrc={ngiTrust} alt="NGI trust" />
+      </a>
+    </div>
 
     <a>
       <p>
