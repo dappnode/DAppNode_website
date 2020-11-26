@@ -20,7 +20,6 @@
     "react-anchor-link-smooth-scroll": "^1.0.11",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
-    "react-hover-image": "^1.0.0",
     "redux": "^4.0.1",
     "sshpk": "^1.16.1",
     "video-react": "^0.13.2"
