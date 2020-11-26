@@ -63,16 +63,16 @@ const Supports = () => (
       <p>Supported through grants and funds from: </p>
     </div>
 
-    {supportersSvgLogos.map(({ alt, src, href }) => (
-      <a href={href} {...newTabProps}>
+    {supportersSvgLogos.map(({ alt, src, href }, i) => (
+      <a key={i} href={href} {...newTabProps}>
         <img src={src} alt={alt} className="svg-logo" />
       </a>
     ))}
 
     <br />
 
-    {supportersPng.map(({ alt, src, href }) => (
-      <a href={href} {...newTabProps}>
+    {supportersPng.map(({ alt, src, href }, i) => (
+      <a key={i} href={href} {...newTabProps}>
         <img src={src} alt={alt} />
       </a>
     ))}
