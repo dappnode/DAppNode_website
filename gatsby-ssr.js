@@ -1,4 +1,4 @@
-const React = require('react')
+import React from 'react'
 
 setHeadComponents([
   <script
@@ -9,7 +9,7 @@ setHeadComponents([
   ></script>,
 ])
 
-exports.onRenderBody = ({ setPreBodyComponents }) => {
+export function onRenderBody({ setPreBodyComponents }) {
   setPreBodyComponents([
     <noscript key="noscript">
       Your browser does not support JavaScript!
