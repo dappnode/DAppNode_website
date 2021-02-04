@@ -1,7 +1,9 @@
-const React = require('react')
+import React from 'react'
 
-exports.onRenderBody = ({ setPreBodyComponents }) => {
+export function onRenderBody({ setPreBodyComponents }) {
   setPreBodyComponents([
-    <noscript key="noscript">Your browser does not support JavaScript!</noscript>,
+    <noscript key="noscript">
+      Your browser does not support JavaScript!
+    </noscript>,
   ])
 }
