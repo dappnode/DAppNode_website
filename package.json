@@ -5,11 +5,13 @@
   "version": "0.0.1",
   "author": "Anish Agnihotri <contact@anishagnihotri.com>",
   "dependencies": {
-    "gatsby": "^2.0.76",
+    "@babel/plugin-transform-spread": "^7.12.1",
+    "gatsby": "^2.32.2",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-offline": "^2.0.23",
+    "gatsby-plugin-plausible": "^0.0.7",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-source-filesystem": "^2.0.8",
@@ -36,6 +38,8 @@
   ],
   "license": "MIT",
   "scripts": {
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
@@ -43,6 +47,8 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
+    "@babel/plugin-transform-classes": "^7.12.13",
+    "babel-core": "^7.0.0-bridge.0",
     "prettier": "^1.15.2"
   },
   "repository": {
