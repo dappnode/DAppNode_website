@@ -47,7 +47,6 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "@babel/plugin-transform-classes": "^7.12.13",
     "babel-core": "^7.0.0-bridge.0",
     "prettier": "^1.15.2"
   },

@@ -6,8 +6,10 @@ import logo from '../../images/dappnode.png'
 import './main.css'
 
 class Header extends React.Component {
-  state = { showMenu: false }
-
+  constructor(props) {
+    super(props)
+    this.state = { showMenu: false }
+  }
   toggleMenu = () => {
     this.setState({
       showMenu: !this.state.showMenu,
