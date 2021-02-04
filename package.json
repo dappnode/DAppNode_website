@@ -6,7 +6,7 @@
   "author": "Anish Agnihotri <contact@anishagnihotri.com>",
   "dependencies": {
     "@babel/plugin-transform-spread": "^7.12.1",
-    "gatsby": "^2.32.2",
+    "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-manifest": "^2.0.9",
